@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    
+    <item 
+        android:id="@+id/reminder_list"
+        android:title="@string/reminder_list"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/alarm"
+        
+        />
+    <item 
+        android:id="@+id/display_map"
+        android:title="@string/displaymap"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/mapicon"
+        
+        />
+    <item 
+        android:id="@+id/twitter"
+        android:title="@string/twitter"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/twitter"
+        
+        />
+
+</menu>

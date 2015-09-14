@@ -1,0 +1,195 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin"
+    	tools:context=".ReminderActivity" 
+        android:background="@drawable/background" >
+        
+    	<RelativeLayout 
+    	    
+		    android:padding="10dp"
+			android:background = "#40FFFFFF"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    >
+    	    
+   	    <TextView 
+            android:id="@+id/leavingFrom"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/leavingFrom"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            
+            />
+   	    
+   	    <TextView 
+            android:id="@+id/leaving_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:layout_toRightOf ="@+id/leavingFrom"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            />
+   	    
+   	    <TextView 
+            android:id="@+id/goingTo"
+            android:layout_alignParentLeft="true"
+            android:text="@string/goingTo"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/leaving_source"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            
+            />
+   	    
+   	    <TextView 
+            android:id="@+id/going_dest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:layout_toRightOf ="@+id/leavingFrom"
+            android:layout_below="@+id/leaving_source"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            
+            />
+   	    
+   	    <TextView 
+            android:id="@+id/timeChosen"
+            android:layout_alignParentLeft="true"
+            android:text="@string/timechosen"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_below="@+id/going_dest"
+            android:layout_marginTop="10dp"
+            
+            />
+        
+        <TextView 
+            android:id="@+id/trip_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:layout_toRightOf ="@+id/leavingFrom"
+            android:layout_below="@+id/going_dest"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            
+            />
+        
+        <TextView 
+            android:id="@+id/day"
+            android:layout_alignParentLeft="true"
+            android:text="@string/day"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trip_time"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            
+            />
+        
+        <TextView 
+            android:id="@+id/day_selected"
+            android:layout_alignParentRight="true"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf ="@+id/leavingFrom"
+            android:layout_below="@+id/trip_time"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            
+            
+            />
+        
+        
+        <TextView 
+            android:id="@+id/triggerAlarm"
+            android:layout_alignParentLeft="true"
+            android:text="@string/triggerBefore"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/day_selected"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            
+            />
+        
+        <Spinner
+	        android:id="@+id/time_spinner"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/triggerAlarm"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/day_selected"
+	    	android:layout_marginTop="8dp"
+	        android:entries="@array/time_choices"/>
+	        
+        
+        
+        <Button 
+	        android:id="@+id/ringtone_button"
+	        android:layout_below="@+id/time_spinner"
+	        android:layout_marginTop="20dp"
+	        android:layout_centerInParent="true"
+	        android:layout_height="wrap_content"
+	        android:layout_width="match_parent"
+	        android:text="@string/select_ringtone"
+	        android:background="@android:drawable/btn_default"
+	        android:padding="10dp"
+	        android:enabled="true"
+        
+        />
+        
+    	<Button 
+	        android:id="@+id/set_button"
+	        android:layout_below="@+id/ringtone_button"
+	        android:layout_marginTop="20dp"
+	        android:layout_centerInParent="true"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:text="@string/set_alarm"
+	        android:background="@android:drawable/btn_default"
+	        android:padding="10dp"
+	        android:enabled="false"
+        
+        />    
+        
+    	    
+    	    
+    	</RelativeLayout>    
+    
+       
+        
+        
+        
+        
+</RelativeLayout>
+

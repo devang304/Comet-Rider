@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ReminderTrigger"
+    android:background="@drawable/background" >
+    
+    <RelativeLayout 
+  	    android:padding="10dp"
+		android:background = "#40FFFFFF"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    >
+		 
+        <TextView 
+            android:id="@+id/alarmText"
+            android:layout_above="@+id/alarmTrigger"
+            android:text="@string/yourBus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:layout_marginBottom="20dp"
+            
+            />
+        
+       <ImageView
+        android:id="@+id/alarmTrigger"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/desc"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/alarmtrigger"
+        
+        
+        />
+       
+       <Button 
+           android:id="@+id/stopAlarm"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:padding="5dp"
+           android:layout_below="@+id/alarmTrigger"
+           android:layout_centerInParent="true"
+           android:layout_marginTop="10dp"
+           android:text="@string/stopAlarm"
+           android:background="@android:drawable/btn_default"
+           
+           />
+       
+       
+       
+        
+        
+   </RelativeLayout>
+    
+    
+    
+
+</RelativeLayout>

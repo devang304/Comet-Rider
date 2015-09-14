@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:background="@drawable/background" >
+	
+    <ProgressBar
+ 	android:id="@+id/progress_bar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:visibility="visible" />
+    
+	<RelativeLayout
+    android:id="@+id/inner_relative"
+    android:padding="25dp"
+	android:background = "#40FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    >
+    
+    
+    
+	<TextView 
+    android:id="@+id/from"
+    android:layout_marginTop="40dp"
+    android:text="@string/from"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:textSize="12pt"
+    android:textColor="#000000"
+   
+    
+    />
+	
+    <Spinner
+    android:id="@+id/from_spinner"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@id/from"
+    android:layout_marginLeft="100dp"
+    android:layout_marginTop="35dp"
+    android:entries="@array/bus_stop_choices"
+ />
+    
+    <TextView 
+    android:id="@+id/to"
+    android:layout_below="@+id/from"
+    android:layout_marginTop="40dp"
+    android:text="@string/to"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:textSize="12pt"
+    android:textColor="#000000"
+   
+    />
+	
+    <Spinner
+    android:id="@+id/to_spinner"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@id/to"
+    android:layout_marginLeft="100dp"
+    android:layout_below="@+id/from_spinner"
+	android:layout_marginTop="28dp"
+    android:entries="@array/bus_stop_choices"
+   />
+    
+    <TextView 
+    android:id="@+id/day"
+    android:layout_below="@+id/to"
+    android:layout_marginTop="40dp"
+    android:text="@string/day"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:textSize="12pt"
+    android:textColor="#000000"
+    />
+	
+    <Spinner
+        android:id="@+id/day_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/day"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@+id/to_spinner"
+    	android:layout_marginTop="28dp"
+        android:entries="@array/day_choices"
+        
+        />
+    
+    <Button 
+        android:id="@+id/next_button"
+        android:layout_below="@+id/day_spinner"
+        android:layout_marginTop="40dp"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:text="@string/next"
+        android:background="@android:drawable/btn_default"
+        
+        />
+	    
+	    
+	</RelativeLayout>
+	
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ScheduleActivity" 
+    android:background="@drawable/background"
+    >
+    
+    <ImageView
+        android:id="@+id/destinationImage"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/nameLayout"
+        android:contentDescription="@string/desc"
+        android:cropToPadding="true"
+        android:scaleType="fitXY"
+        />
+    
+    <LinearLayout
+        
+        android:id="@+id/nameLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/destinationImage" 
+        android:orientation="horizontal"
+        android:divider="@android:color/black"
+       	android:dividerHeight="1dp"
+       	android:background="#40FFFFFF"
+	
+        >
+ 
+        
+        <TextView
+            android:id="@+id/stopDestination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="@string/reachesAt"
+            android:textColor="#000000"
+            android:textSize="10pt" 
+            android:divider="@android:color/black"
+       		android:dividerHeight="1dp"/>
+        
+        
+        
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/nameLayout"
+        android:background="#000000"
+        android:padding="1dp" />
+    
+    
+    
+    <LinearLayout
+        android:id="@+id/listlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameLayout" 
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:divider="@android:color/black"
+       	android:dividerHeight="1dp"
+        >
+     
+        
+        <ListView 
+        
+    		android:id="@+id/listViewDestination"
+    		android:layout_width="0dp"
+        	android:layout_height="wrap_content"
+       		android:layout_weight="1"
+    		android:background="#40FFFFFF"
+    	/>
+        
+    </LinearLayout>
+    
+    
+    
+    
+    
+    
+
+</RelativeLayout>
